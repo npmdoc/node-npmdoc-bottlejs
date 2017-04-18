@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.bottlejs.bottlejs">
+            function <span class="apidocSignatureSpan"></span>bottlejs
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.bottlejs.Bottle">
             function <span class="apidocSignatureSpan">bottlejs.</span>Bottle
             <span class="apidocSignatureSpan">(name)</span>
@@ -99,7 +108,68 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.bottlejs.toString">
+            function <span class="apidocSignatureSpan">bottlejs.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bottlejs.</span>config</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bottlejs.clear">module bottlejs.clear</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bottlejs.clear.clear">
+            function <span class="apidocSignatureSpan">bottlejs.</span>clear
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bottlejs.list">module bottlejs.list</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bottlejs.list.list">
+            function <span class="apidocSignatureSpan">bottlejs.</span>list
+            <span class="apidocSignatureSpan">(container)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bottlejs.pop">module bottlejs.pop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bottlejs.pop.pop">
+            function <span class="apidocSignatureSpan">bottlejs.</span>pop
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bottlejs.toString">module bottlejs.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bottlejs.toString.toString">
+            function <span class="apidocSignatureSpan">bottlejs.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
 
         </li>
 
@@ -109,6 +179,37 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.bottlejs" id="apidoc.module.bottlejs">module bottlejs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bottlejs.bottlejs" id="apidoc.element.bottlejs.bottlejs">
+        function <span class="apidocSignatureSpan"></span>bottlejs
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Bottle(name) {
+    if (!(this instanceof Bottle)) {
+        return Bottle.pop(name);
+    }
+
+    this.id = id++;
+
+    this.decorators = {};
+    this.middlewares = {};
+    this.nested = {};
+    this.providerMap = {};
+    this.originalProviders = {};
+    this.deferred = [];
+    this.container = {
+        $decorator : decorator.bind(this),
+        $register : register.bind(this),
+        $list : list.bind(this)
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
@@ -237,6 +338,150 @@ Param                      | Type       | Details
     </ul>
 
 
+
+    <h2>
+        <a href="#apidoc.element.bottlejs.toString" id="apidoc.element.bottlejs.toString">
+        function <span class="apidocSignatureSpan">bottlejs.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bottlejs.clear" id="apidoc.module.bottlejs.clear">module bottlejs.clear</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bottlejs.clear.clear" id="apidoc.element.bottlejs.clear.clear">
+        function <span class="apidocSignatureSpan">bottlejs.</span>clear
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clear(name) {
+    if (typeof name === &#x27;string&#x27;) {
+        delete bottles[name];
+    } else {
+        bottles = {};
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bottlejs.list" id="apidoc.module.bottlejs.list">module bottlejs.list</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bottlejs.list.list" id="apidoc.element.bottlejs.list.list">
+        function <span class="apidocSignatureSpan">bottlejs.</span>list
+        <span class="apidocSignatureSpan">(container)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function list(container) {
+    return Object.keys(container || this.container || {}).filter(byMethod);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+In general, this function should only be called in situations where you intend to reset the bottle instance with new providers,
+decorators, etc. such as test setup.
+
+Param                      | Type       | Details
+:--------------------------|:-----------|:--------
+**name**&#x3c;br /&#x3e;*(optional)* | *String*   | The name of the bottle. If passed, bottle will remove the internal instance,
+if such a bottle was created using `Bottle.pop`. If not passed, all named internal instances will be cleared.
+
+#### list(container)
+#### prototype.<span class="apidocCodeKeywordSpan">list</span>()
+#### prototype.container.$list()
+
+Used to list the names of all registered constants, values, and services on the container.  Must pass a container to the global
+static version `Bottle.list(bottle.container)`.  The instance and container versions return the services that are registered within
+.
+
+Returns an array of strings.
+
+Param                           | Type       | Details
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bottlejs.pop" id="apidoc.module.bottlejs.pop">module bottlejs.pop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bottlejs.pop.pop" id="apidoc.element.bottlejs.pop.pop">
+        function <span class="apidocSignatureSpan">bottlejs.</span>pop
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pop(name) {
+    var instance;
+    if (typeof name === &#x27;string&#x27;) {
+        instance = bottles[name];
+        if (!instance) {
+            bottles[name] = instance = new Bottle();
+            instance.constant(&#x27;BOTTLE_NAME&#x27;, name);
+        }
+        return instance;
+    }
+    return new Bottle();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## API
+
+### Bottle
+
+#### pop(name)
+
+Used to get an instance of bottle.  If a name is passed, bottle will return the same instance.  Calling the Bottle constructor as
+ a function will call and return return `Bottle.pop`, so `Bottle.<span class="apidocCodeKeywordSpan">pop</span>(&#x27;Soda&#x27;) ===
+Bottle(&#x27;Soda&#x27;)`
+
+Param                      | Type       | Details
+:--------------------------|:-----------|:--------
+**name**&#x3c;br /&#x3e;*(optional)* | *String*   | The name of the bottle. If passed, bottle will store the instance internally
+ and return the same instance if `Bottle.pop` is subsequently called with the same name.
+
+#### clear(name)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bottlejs.toString" id="apidoc.module.bottlejs.toString">module bottlejs.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bottlejs.toString.toString" id="apidoc.element.bottlejs.toString.toString">
+        function <span class="apidocSignatureSpan">bottlejs.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
 
 
 </div>
